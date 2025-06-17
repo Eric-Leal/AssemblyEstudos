@@ -3,8 +3,8 @@
     msg1: .asciiz "Digite o primeiro numero "
     msg2: .asciiz "Digite o segundo numero "
     msgResultado: .asciiz "O resultado e: "
-    msgEscolha: .asciiz "Escolha o que deseja fazer:"
-    msgOpcoes: .asciiz "1 - soma | 2 - subtracao | 3 - multiplicacao | 4 - divisao"
+    msgEscolha: .asciiz "Escolha o que deseja fazer:\n"
+    msgOpcoes: .asciiz "1 - soma \n2 - subtracao \n3 - multiplicacao \n4 - divisao"
 
 .text
 
