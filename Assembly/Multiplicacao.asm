@@ -26,8 +26,11 @@ syscall
 move $t1, $v0
 
 #Comando para fazer a multiplicação
-mult	$t0, $t1
-mflo	$t2		
+#Pode ser feito assim
+mul $t2, $t0, $t1
+#Ou assim, com os numero que vao ser multiplicados no mult e o armazenamento na mflo
+# mult   $t0, $t1
+# mflo   $t2
 
 #Mostrar mensagem de a multiplicação é:
 li $v0, 4
