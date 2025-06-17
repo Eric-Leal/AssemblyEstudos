@@ -27,8 +27,8 @@
     move $t1, $v0
 
     #dividir um numero pelo outro
-    div	$t0, $t1			
-    mflo $t2 #armazenar resultado da divisao na $t2
+    div	$t2, $t0, $t1			
+    #mflo $t2 #armazenar resultado da divisao na $t2
     
     #mostrar a mensagem de A divisao é
     li $v0, 4
