@@ -1,54 +1,52 @@
 .data
 
 msg1: .asciiz "Digite um numero: \n"
-positivo: .asciiz "Numero È positivo"
-negativo: .asciiz "Numero È negativo"
-zero: .asciiz "… zero"
+positivo: .asciiz "Numero √© positivo"
+negativo: .asciiz "Numero √© negativo"
+zero: .asciiz "√© zero"
 
 .text
 
-#Mostrando mensagem de imprimir numero
+# Mostrando mensagem para digitar n√∫mero
 li $v0, 4
 la $a0, msg1
 syscall
 
-#Digitar o numero
+# Digitar o n√∫mero
 li $v0, 5
 syscall
 move $t0, $v0
 
-#Verificando se o numero È igual a zero
+# Verificando se o n√∫mero √© igual a zero
 Zero:
-bne $t0, $zero, FimZero #Se $t0 n„o for igual a zero, ele pula para a linha 'FimZero:'
+bne $t0, $zero, FimZero # Se $t0 n√£o for igual a zero, pula para 'FimZero'
 
-	#Mostra a mensagem de que o numero È zero
+	# Mostra a mensagem de que o n√∫mero √© zero
 	li $v0, 4
 	la $a0, zero
 	syscall
-	
-	j Fim #ApÛs mostrar a mensagem de que o numero È zero, ele pula para a linha 'Fim'
+
+	j Fim # Ap√≥s mostrar a mensagem de que o n√∫mero √© zero, pula para 'Fim'
 FimZero:
 
-slt $t1, $t0, $zero #Verifica se $t0 È menor que zero, se sim, retorna 1, se n„o retorna 0
+slt $t1, $t0, $zero # Verifica se $t0 √© menor que zero, se sim, retorna 1, sen√£o retorna 0
 
-#Verificando se numero È positivo/negativo
+# Verificando se n√∫mero √© positivo/negativo
 NumPositivo:
-bne $t1, $zero, FimPositivo #Verfica se $t1 n„o È igual a zero, se for igual a zero, ele È positivo e 
-#continua na linha de baixo, se n„o for, ele È igual a 1, ou seja, È negativo e pula para a linha FimPositivo
-	
-	#Mostra a mensagem de que o numero È postivo
+bne $t1, $zero, FimPositivo # Verifica se $t1 n√£o √© igual a zero, se for igual a zero, √© positivo e continua, sen√£o √© negativo e pula para 'FimPositivo'
+
+	# Mostra a mensagem de que o n√∫mero √© positivo
 	li $v0, 4
 	la $a0, positivo
 	syscall
-	
-	j Fim #ApÛs mostrar a mensagem de que È um numero postivo, ele pula para o Fim
-	
+
+	j Fim # Ap√≥s mostrar a mensagem de que √© um n√∫mero positivo, pula para 'Fim'
+
 FimPositivo:
 
-	#Mostra a mensagem de que o numero È negativo
+	# Mostra a mensagem de que o n√∫mero √© negativo
 	li $v0, 4
 	la $a0, negativo
 	syscall
-	
-Fim:
 
+Fim:
