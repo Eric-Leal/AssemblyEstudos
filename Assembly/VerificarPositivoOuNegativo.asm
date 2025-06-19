@@ -29,7 +29,7 @@ bne $t0, $zero, FimZero # Se $t0 não for igual a zero, pula para 'FimZero'
 	j Fim # Após mostrar a mensagem de que o número é zero, pula para 'Fim'
 FimZero:
 
-slt $t1, $t0, $zero # Verifica se $t0 é menor que zero, se sim, retorna 1, senão retorna 0
+slt $t1, $t0, $zero # Verifica se $t0 é menor que zero, se sim, retorna 1, se não retorna 0
 
 # Verificando se número é positivo/negativo
 NumPositivo:
