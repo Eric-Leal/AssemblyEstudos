@@ -2,7 +2,7 @@
 
 num1: .asciiz "Digite o primeiro numero:"
 num2: .asciiz "Digite o segundo numero:"
-msgMaior: .asciiz " é maior"
+msgMaior: .asciiz " eh maior"
 
 .text
 
@@ -26,7 +26,7 @@ li $v0, 5
 syscall
 move $t1, $v0
 
-slt $t2, $t0, $t1 #verifica se t0 é menor que t1, se sim retorna 1 se nao retorna 0
+slt $t2, $t0, $t1 #verifica se t0 eh menor que t1, se sim retorna 1 se nao retorna 0
 
 
 menor:
@@ -37,11 +37,11 @@ bne $t2, $zero, maior #Se t2 não for igual a zero pula para a linha maior, se f
     move $a0, $t0
     syscall
 
-    #mostra a mensagem de qual numero é maior
+    #mostra a mensagem de qual numero eh maior
     li $v0, 4
     la $a0, msgMaior
     syscall
-    j fim #pula para o final apos mostrar a mensagem de que o numero é maior
+    j fim #pula para o final apos mostrar a mensagem de que o numero eh maior
 
 maior:
 
@@ -50,7 +50,7 @@ maior:
     move $a0, $t1
     syscall
 
-    #mostra a mensagem de qual numero é maior
+    #mostra a mensagem de qual numero eh maior
     li $v0, 4
     la $a0, msgMaior
     syscall

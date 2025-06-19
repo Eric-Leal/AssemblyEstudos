@@ -2,7 +2,7 @@
 
     msg1: .asciiz "Digite o primeiro numero:"
     msg2: .asciiz "Digite o segundo numero:"
-    multiplicacao: .asciiz "O valor da multiplicacao é de :"
+    multiplicacao: .asciiz "O valor da multiplicacao eh de :"
 
 .text
 #Mostrar mensagem de digitar primeiro numero
@@ -32,7 +32,7 @@ mul $t2, $t0, $t1
 # mult   $t0, $t1
 # mflo   $t2
 
-#Mostrar mensagem de a multiplicação é:
+#Mostrar mensagem de a multiplicação eh:
 li $v0, 4
 la $a0, multiplicacao
 syscall

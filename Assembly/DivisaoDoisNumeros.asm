@@ -11,7 +11,7 @@
     la $a0, msg1
     syscall
 
-    #comando para digitar o primeiro numero
+    #Comando para digitar o primeiro numero
     li $v0, 5
     syscall
     move $t0, $v0
@@ -21,16 +21,19 @@
     la $a0, msg2
     syscall
 
-    #comando para digitar o segundo numero
+    #Comando para digitar o segundo numero
     li $v0, 5
     syscall
     move $t1, $v0
 
-    #dividir um numero pelo outro
-    div	$t2, $t0, $t1			
+    #Dividir um numero pelo outro
+    div	$t2, $t0, $t1
+
+    #OU
+    #div $t0, $t1
     #mflo $t2 #armazenar resultado da divisao na $t2
     
-    #mostrar a mensagem de A divisao é
+    #Mostrar a mensagem de A divisao é
     li $v0, 4
     la $a0, msgDiv
     syscall
