@@ -35,7 +35,7 @@
         #Comando para dizer quanto aluno tirou
         li $v0, 5
         syscall
-        move $t0, $v0
+        move $t0, $v0 #
 
         add $s2, $s2, $t0 # $s2 += $t1
 
