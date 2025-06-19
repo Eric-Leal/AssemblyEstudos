@@ -7,8 +7,8 @@ soma: .asciiz "O valor da soma e de: "
 .text
 
 #Mostrar a mensagem de digitar o primeiro numero
-li $v0, 4 # O numero 4 significa que imprime uma String //li signiifica Load Immediate
-la $a0, msg1 # carrega o endereco da String // la significa Load Adress
+li $v0, 4 # O numero 4 significa que imprime uma String || li significa Load Immediate
+la $a0, msg1 # carrega o endereco da String || la significa Load Adress
 syscall # Pedir apra sistema executar uma tarefa
 
 # Digitando o primeiro numero
