@@ -36,5 +36,5 @@ syscall
 
 #Imprimindo resultado da soma
 li $v0, 1 #Imprimir um numero inteiro, o 1 significa print int
-move $a0, $t2
+move $a0, $t2 #$a0 é um dos registradores de argumento usados para passar parâmetros para chamadas de sistema   ||Coloca o número a ser impresso em $a0
 syscall
